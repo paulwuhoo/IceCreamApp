@@ -1,0 +1,21 @@
+<h1>My Favorite Ice Cream Flavors</h1>
+
+<a href="http://localhost:3000/flavors/new">Add new flavor</a>
+
+<ul>
+  <% @flavors.each do |flavor| %>
+    <li>
+      <a href="http://localhost:3000/flavors/<%= flavor.id %>">
+    <%= flavor.name %>
+    </a>
+    | <%= link_to "Edit",
+    "http://localhost:3000/flavors/#{flavor.id}/edit" %>
+    
+    | <%= link_to "Delete",
+    "http://localhost:3000/flavors/#{flavor.id}",
+    :method => :delete,
+    :confirm => "Are you sure?" %>
+    
+    </li>
+  <% end %>
+</ul>

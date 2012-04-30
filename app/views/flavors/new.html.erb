@@ -1,0 +1,10 @@
+<h1>Add a new flavor!</h1>
+
+<%= form_tag "http://localhost:3000/flavors", :method => "post" do %>
+<%= label_tag "Flavor Name:" %>
+<%= text_field_tag "name" %>
+<%= label_tag "Price:" %>
+<%= text_field_tag "price" %>
+<%= submit_tag "Add this flavor" %>
+
+<% end %>

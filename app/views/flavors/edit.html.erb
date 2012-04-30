@@ -1,0 +1,10 @@
+<h1>Change a flavor</h1>
+
+<%= form_tag "http://localhost:3000/flavors/#{@flavor.id}", :method => "put" do %>
+<%= label_tag "Flavor Name:" %>
+<%= text_field_tag("name", @flavor.name) %>
+<%= label_tag "Price:" %>
+<%= text_field_tag("price", @flavor.price) %>
+<%= submit_tag "Change forever!"%>
+
+<% end %>
